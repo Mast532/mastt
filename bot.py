@@ -35,7 +35,7 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 def main() -> None:
     """Запуск бота."""
     # Способ 1 (рекомендуемый): Получение токена из переменной окружения Railway
-    token = os.environ.get("8426954483:AAE79w8rvSI9AiLRbeGE1EjVCeAfPjJ4KeM")
+    token = os.environ.get(8426954483:AAE79w8rvSI9AiLRbeGE1EjVCeAfPjJ4KeM)
     # Способ 2: Прямое указание токена в коде (менее безопасно, только для теста)
     # token = "8426954483:AAE79w8rvSI9AiLRbeGE1EjVCeAfPjJ4KeM"
 
@@ -57,3 +57,4 @@ def main() -> None:
 # ===== 5. ТОЧКА ВХОДА =====
 if __name__ == '__main__':
     main()
+
