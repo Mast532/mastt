@@ -33,6 +33,18 @@ async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
 
 # ===== 4. ГЛАВНАЯ ФУНКЦИЯ =====
 def main() -> None:
+     # ========== НАЧАЛО ВРЕМЕННОГО КОДА (ВСТАВЬТЕ ЭТО) ==========
+    import os
+    print("=== ДИАГНОСТИКА ПЕРЕМЕННЫХ ОКРУЖЕНИЯ ===")
+    # Выведем все переменные, содержащие 'BOT' или 'TOKEN'
+    for key, value in os.environ.items():
+        if 'BOT' in key or 'TOKEN' in key:
+            print(f"НАЙДЕНО: {key} = {value[:10]}...")  # Выведем только начало значения
+    # Выведем конкретно BOT_TOKEN, если он есть
+    bot_token = os.environ.get("BOT_TOKEN")
+    print(f"BOT_TOKEN (через get): {bot_token}")
+    print("=== КОНЕЦ ДИАГНОСТИКИ ===")
+    # ========== КОНЕЦ ВРЕМЕННОГО КОДА ==========
     """Запуск бота."""
     # Способ 1 (рекомендуемый): Получение токена из переменной окружения Railway
     token = os.environ.get("8426954483:AAE79w8rvSI9AiLRbeGE1EjVCeAfPjJ4KeM")
@@ -57,5 +69,6 @@ def main() -> None:
 # ===== 5. ТОЧКА ВХОДА =====
 if __name__ == '__main__':
     main()
+
 
 
